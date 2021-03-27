@@ -1,0 +1,14 @@
+h1 Stonknotes Journal
+
+#stonknotes-journal( data-controller='stonknotes' data-action="scroll@window->stonknotes#infiniteScroll" )
+  button.btn.btn-primary.mb-2#add-twit-button( type='button' ) New Note
+
+  = turbo_frame_tag :stonknotes_content, src: stonknotes_path
+
+  .last-stonknote-placeholder
+    = form_tag stonknotes_path, 'data-action': 'stonknotes#updateCursor' do
+      = hidden_field_tag 'cursor', nil, 'data-stonknotes-target': 'cursor'
+      = button_tag "Load More",
+                   class: 'button btn btn-primary',
+                   type: 'submit',
+                   'data-stonknotes-target': 'loadMoreButton'

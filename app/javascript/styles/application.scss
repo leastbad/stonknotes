@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.bg--orange { background-color: $orange-100; }
+.bg--lightgray { background-color: $gray-300; }
+
+.stonknote-show {
+  border-top: #2E2F30 1px solid;
+  font-size: 10pt;
+  padding: 10px;
+
+  &--call-correct { @extend .stonknote-show; background-color: #a1eda2; }
+  &--call-incorrect { @extend .stonknote-show; background-color: #fcbdbd; }
+  &--call-partial { @extend .stonknote-show; background-color: $gray-300; }
+}
+
+.stonknote-show__timestamp {
+  @extend .mb-1;
+  color: $gray-600;
+  font-size: 9pt;
+}
+
+.stonknote-show__actions {
+  font-size: 12pt;
+}

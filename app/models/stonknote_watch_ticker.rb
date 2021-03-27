@@ -1,0 +1,2 @@
+class StonknoteWatchTicker < ApplicationRecord
+end

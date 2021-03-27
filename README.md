@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This sample Rails application is provided on Github for EDUCATIONAL USE ONLY for the demonstration of design patterns
+in web software development. There is no license with this application that allows reusing the features of this
+program for commercial use or as a part of another project, in whole or in part. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Copyright ©2021 Winston Kotzan - All rights reserved.
