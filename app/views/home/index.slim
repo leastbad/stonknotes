@@ -1,5 +1,5 @@
 .row
-  .col-md-9= render(partial: 'stonknotes_section')
+  .col-md-9= render partial: 'stonknotes_section', locals: { stonknotes: @result }
   .col-md-3.bg--orange
     .col-sm.bg-danger
       h2 Tickers

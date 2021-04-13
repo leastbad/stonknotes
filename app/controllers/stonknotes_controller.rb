@@ -10,11 +10,7 @@ class StonknotesController < ApplicationController
       .map { |sn| StonknotePresenter.new(sn) }
 
     respond_to do |format|
-      format.turbo_stream do
-        render(turbo_stream: turbo_stream.append(:stonknotes_content,
-                                                 partial: 'stonknotes/stonknotes',
-                                                 locals: { stonknotes: @result }))
-      end
+      format.turbo_stream { render(layout: false) }
       format.html
     end
   end
