@@ -9,15 +9,12 @@ export default class extends Controller {
     let scrollTriggerPosition = document.body.clientHeight - window.innerHeight - 500;
     if(window.scrollY >= scrollTriggerPosition && turboReady()) {
       // console.log('Triggering infinite scroll event');
-      // console.log(`Turbo.status ${Turbo.navigator?.formSubmission?.state}`);
-      // console.log(`Turbo ready? ${turboReady()}`);
+      // console.log('Cursor position: ' + document.querySelector('input[data-stonknotes-target="cursor"]').value);
+      // console.log(`Turbo.status ${Turbo.navigator?.formSubmission?.state} / Turbo ready? ${turboReady()}`);
       this.loadMoreButtonTarget.click();
-    }
-  }
 
-  updateCursor() {
-    let stonknoteElements = document.querySelectorAll('.stonknote-show');
-    let lastId = stonknoteElements[stonknoteElements.length - 1].dataset.stonknoteId;
-    this.cursorTarget.value = lastId;
+      // Disable button so form doesn't accidentally get submitted multiple times
+      this.loadMoreButtonTarget.setAttribute('disabled', true);
+    }
   }
 }
